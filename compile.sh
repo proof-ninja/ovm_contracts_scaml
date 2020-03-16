@@ -9,6 +9,7 @@ DEPENDENCIES="lib.ml \
               types/ovm_global_types.ml \
               models/emit_event.ml \
               models/extend_deposited_ranges.ml \
+              models/get_checkpoint_id.ml \
               entry.ml
 "
 cat $DEPENDENCIES > $FILE
