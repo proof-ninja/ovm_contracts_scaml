@@ -12,6 +12,7 @@ DEPENDENCIES="lib.ml \
               models/get_checkpoint_id.ml \
               models/store_checkpoint.ml \
               utils/tez_utils.ml \
+              utils/primitive_coder.ml \
               entry.ml
 "
 cat $DEPENDENCIES > $FILE
