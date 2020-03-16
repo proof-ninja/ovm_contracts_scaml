@@ -10,6 +10,7 @@ DEPENDENCIES="lib.ml \
               models/emit_event.ml \
               models/extend_deposited_ranges.ml \
               models/get_checkpoint_id.ml \
+              models/store_checkpoint.ml \
               entry.ml
 "
 cat $DEPENDENCIES > $FILE
