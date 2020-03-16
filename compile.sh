@@ -11,6 +11,7 @@ DEPENDENCIES="lib.ml \
               models/extend_deposited_ranges.ml \
               models/get_checkpoint_id.ml \
               models/store_checkpoint.ml \
+              utils/tez_utils.ml \
               entry.ml
 "
 cat $DEPENDENCIES > $FILE
