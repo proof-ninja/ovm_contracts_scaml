@@ -16,6 +16,7 @@ DEPENDENCIES="lib.ml \
               actions/commitment.ml \
               actions/deposit.ml \
               actions/finalize_checkpoint.ml \
+	      actions/claim_property.ml \
               entry.ml
 "
 cat $DEPENDENCIES > $FILE

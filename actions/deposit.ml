@@ -34,12 +34,11 @@ let deposit_action (deposit_params: deposit_params)(s: ovm_storage) : context =
   let state_update: property = {
       (* // TODO: Injecting StateUpdate predicate address *)
       predicate_address = Address "tz1TGu6TN5GSez2ndXXeDX6LgUDvLzPLqgYV";
-      inputs = Map [
-                   (Nat 0, encode_address(deposit_params.token_type));
-                   (Nat 1, encode_range(deposited_range));
-                   (Nat 2, encode_number(s.commitment_storage.current_block));
-                   (Nat 3, encode_property(deposit_params.state_object));
-                 ];
+      inputs =
+        Map.update (Nat 3) (Some (encode_property deposit_params.state_object))
+          (Map.update (Nat 2)(Some (encode_number s.commitment_storage.current_block))
+             (Map.update (Nat 1)(Some (encode_range deposited_range))
+                (Map.update (Nat 0) (Some (encode_address deposit_params.token_type)) Map.empty)));
     }
   in
 
