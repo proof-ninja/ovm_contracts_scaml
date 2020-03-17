@@ -19,7 +19,7 @@ DEPENDENCIES="lib.ml \
 	      actions/finalize_exit.ml \
 	      actions/claim_property.ml \
 	      actions/index.ml \
-              entry.ml
+              main.ml
 "
 cat $DEPENDENCIES > $FILE
 scamlc $FILE
