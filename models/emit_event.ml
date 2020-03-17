@@ -7,7 +7,7 @@ let emit_event s topic params =
   (* TODO: use level *)
   let level: timestamp = Global.get_now () in
   if (s.ts < level) then begin
-    let topic_sorted_events = Map [ (topic, [event]) ] in
+    let topic_sorted_events = Map.update topic (Some [event]) Map.empty in
     {
       events = topic_sorted_events;
       ts = level;
