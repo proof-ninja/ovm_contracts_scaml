@@ -18,6 +18,7 @@ DEPENDENCIES="lib.ml \
               actions/finalize_checkpoint.ml \
 	      actions/finalize_exit.ml \
 	      actions/claim_property.ml \
+	      actions/index.ml \
               entry.ml
 "
 cat $DEPENDENCIES > $FILE
