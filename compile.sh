@@ -22,4 +22,4 @@ DEPENDENCIES="lib.ml \
               main.ml
 "
 cat $DEPENDENCIES > $FILE
-scamlc $FILE
+time scamlc $FILE
